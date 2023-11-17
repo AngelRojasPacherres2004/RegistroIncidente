@@ -43,7 +43,7 @@ private boolean checkBoxPrioridadSelected;
     
     private void CheckBoxPrioridadActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         // TODO add your handling code here:
-        // Toggle the priority status when the checkbox is clicked
+    
         prioridad = checkBoxPrioridad.isSelected();
     }  
     
