@@ -475,17 +475,17 @@ public void updateIncidentList() {
         File selectedFile = fileChooser.getSelectedFile();
 
         try {
-            // Read the content of the file
+           
             BufferedReader reader = new BufferedReader(new FileReader(selectedFile));
             String line;
 
-            // Clear existing data
+           
             incidentes.clear();
             modeloListIncidentes.clear();
 
-            // Read each line and populate the incident data
+           
             while ((line = reader.readLine()) != null) {
-                // Assuming the file format is: "Tipo: ... - Hora: ... - Fecha: ... - Descripcion: ..."
+              
                 String[] parts = line.split(" - ");
 
                 if (parts.length == 5) {
@@ -520,20 +520,20 @@ public void updateIncidentList() {
     }//GEN-LAST:event_lblEditar2MouseClicked
 
     public void saveIncidentDataToFile() {
-    // Create a JFileChooser to let the user choose the file location
+    
     JFileChooser fileChooser = new JFileChooser();
     int returnValue = fileChooser.showSaveDialog(null);
 
     if (returnValue == JFileChooser.APPROVE_OPTION) {
         try {
-            // Get the selected file
+           
             java.io.File file = fileChooser.getSelectedFile();
 
-            // Write incident data to the file
-            try ( // Create a BufferedWriter to write data to the file
+            
+            try ( 
                     BufferedWriter writer = new BufferedWriter
         (new FileWriter(file + ".txt"))) {
-                // Write incident data to the file
+                
                 for (Incidente incidente : incidentes) {
                     writer.write("Tipo: " + incidente.getTipo() 
                             + " - Hora: " + incidente.getHora() 
@@ -543,10 +543,10 @@ public void updateIncidentList() {
                     
                     writer.write(" - Descripción: " + incidente.getDescripcion() + "\n\n");
                 }
-                // Close the writer
+              
             }
 
-            // Inform the user that the data has been saved
+           
             javax.swing.JOptionPane.showMessageDialog
         (this, "los datos se han guardado correctamente.");
         } catch (IOException e) {
