@@ -148,7 +148,7 @@ private FrameVisualizar padre;
   String selectedIncidentString = lstIncidente2.getSelectedValue();
 
     if (selectedIncidentString != null) {
-        // Extract the incident and risk level from the selected string}
+        
         
         String[] parts = selectedIncidentString.split(" - Riesgo: ");
         String selectedIncident = parts[0];
@@ -163,7 +163,7 @@ private FrameVisualizar padre;
             }
         }
 
-        // Update the list with the modified incidents
+        
         updateIncidentList();
     }
     
@@ -172,7 +172,7 @@ private FrameVisualizar padre;
     private void updateIncidentList() {
     DefaultListModel<String> modeloListIncidentes2 = new DefaultListModel<>();
 
-    // Add each incident and its risk level to lstIncidente2
+   
     for (Incidente incidente : padre.getIncidentes()) {
         modeloListIncidentes2.addElement(incidente.getDatosMostrar() + " - Riesgo: " + incidente.getRiesgo());
     }
