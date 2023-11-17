@@ -110,12 +110,7 @@ private void cargarIncidentes() {
     }                                         
 
     }
-//public void setIncidente(Incidente incidente){
-//    
-//    this.pacienteSelecionado = incidente; 
-//    txtPaciente.setText(incidente.getDatosMostrar());
-//    
-//    }
+
 private void salir(){
       padre.setVisible(true);
       this.dispose();
